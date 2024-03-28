@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Shopee auto checkout</title>
+  </head>
+  <body>
+    <div class="flex flex-col justify-center items-center h-screen">
+      <h1 class="text-center text-3xl font-bold mb-10">Shopee auto checkout</h1>
+      <form action="/submit-form" method="post" class="w-[50rem]">
+        <div class="mb-5">
+          <label for="link" class="block mb-2">Enter link:</label>
+          <input type="text" id="link" name="link" class="block w-full border border-black rounded-md py-2 px-4" />
+        </div>
+        <div class="flex justify-center">
+          <input type="submit" value="Submit" class="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md cursor-pointer" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
