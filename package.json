@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "nmtri2810",
-  "license": "",
+  "license": "UNLICENSED",
   "scripts": {
-    "start": "nodemon app.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel ./src -d ./build/src",
+    "build": "npm run clean && npm run build-babel",
+    "production": "npm run build && node ./build/src/server.js",
+    "start": "node ./src/server.js",
+    "dev": "nodemon --exec npx babel-node ./src/server.js",
     "style": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
   },
   "dependencies": {
@@ -17,6 +22,10 @@
     "puppeteer": "^22.6.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.3",
     "nodemon": "^3.1.0",
     "tailwindcss": "^3.4.3"
   }

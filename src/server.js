@@ -3,7 +3,7 @@ import "dotenv/config";
 import bodyParser from "body-parser";
 import path from "path";
 
-import handleSubmit from "./src/handleSubmit.js";
+import handleSubmit from "./handleSubmit.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
